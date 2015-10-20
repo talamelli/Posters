@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Models.Notizia>
+
+@{
+    ViewBag.Title = "Posters";
+}
+
+<h2>Post</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titolo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SitoProvenienza)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="td-color">
+            
+            @Html.DisplayFor(modelItem => item.Titolo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SitoProvenienza)
+        </td>
+        <td>
+    </tr>
+}
+
+</table>
