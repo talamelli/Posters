@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
+
+<h2>ChangeFonti</h2>
+
+@{if(User.Identity.IsAuthenticated)
+    {
+        foreach(Fonte item in Model)
+        {
+            if(item.IsChecked)
+            {
+                <br />
+                <label>@item.Titolo</label>
+                @Html.ActionLink(
+                           linkText:"Rimuovi",
+                           actionName: "Rimuovi",
+                           controllerName:"F",
+                           routeValues: new { Titolo = item.Titolo },
+                           htmlAttributes:null )
+            }
+            else
+            {
+                <br />
+                <label>@item.Titolo</label>
+                @Html.ActionLink("Aggiungi","Aggiungi", controllerName: "F", routeValues: new { Titolo = item.Titolo },htmlAttributes: null)
+
+            }
+        }
+    }
+    else
+    {
+            <h1>
+                Accedi o Registrati
+            </h1>
+        }
+}

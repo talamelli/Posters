@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
+
+
+@using (Ajax.BeginForm("UpdateValue", "F",
+  new AjaxOptions { UpdateTargetId = "divdata" }))
+{
+    <div id="divdata"></div>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>
+                @Html.CheckBox(item.Titolo,item.IsChecked)
+                @Html.Label(item.Titolo)
+            </li>
+        }
+    </ul>
+        <button>Submit</button>
+}

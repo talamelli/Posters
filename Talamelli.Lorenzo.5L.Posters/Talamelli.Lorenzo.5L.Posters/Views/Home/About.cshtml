@@ -1,7 +1,22 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
 
-<p>Use this area to provide additional information.</p>
+@{
+    ViewBag.Title = "Sorgente";
+}
+
+<h2>Sorgente</h2>
+
+<form>
+    
+    @foreach (var item in Model)
+    {
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" > @item.Titolo
+        </label>
+    </div>
+    }
+    <input title="Submit" type="submit" action="@Url.Action("Submit","F")" />
+ </form>
+                                                
+

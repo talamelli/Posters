@@ -12,6 +12,9 @@ using Talamelli.Lorenzo._5L.Posters.Models;
 
 namespace Talamelli.Lorenzo._5L.Posters.Controllers
 {
+    //account test
+    //username: prova@prova.com
+    //psw: Alaakbar12!
     [Authorize]
     public class AccountController : Controller
     {

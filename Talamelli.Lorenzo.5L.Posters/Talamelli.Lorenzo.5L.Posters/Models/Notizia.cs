@@ -8,7 +8,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Terradue.ServiceModel.Syndication;
 
-namespace Talamelli.Lorenzo._5L.Posters.Models
+namespace Talamelli.Lorenzo._5L.Posters
 {
     public class Notizia
     {
@@ -21,21 +21,23 @@ namespace Talamelli.Lorenzo._5L.Posters.Models
 
         }
 
-        public List<Notizia> GeneratoreNotizie()
+        public List<Notizia> GeneratoreNotizie(string UserId)
         {
-            Provider GetNotizie = new Provider();
+            Provider GetNotizie = new Provider(UserId);
+
             List<Notizia> giornale = new List<Notizia>();
 
-            string Url = "http://ilmattino.it/rss/home.xml";//esempio
-
-            SyndicationFeed feed = SyndicationFeed.Load(GetNotizie.EstrttoreNotizie(Url));
-
-            //riempimento lista di notizie (Descrizione e Titolo)
-            foreach (SyndicationItem itemus in feed.Items)
+            foreach (Fonte Url in GetNotizie.LUrl)
             {
-                giornale.Add(new Notizia { Titolo = itemus.Title.Text, Descrizione = itemus.Summary.Text, SitoProvenienza = Url });
-            }
+                SyndicationFeed feed = SyndicationFeed.Load(GetNotizie.EstrttoreNotizie(Url.URL));
 
+                //riempimento lista di notizie (Descrizione e Titolo)
+                foreach (SyndicationItem itemus in feed.Items)
+                {
+                    giornale.Add(new Notizia { Titolo = itemus.Title.Text, Descrizione = itemus.Summary.Text, SitoProvenienza = Url.Titolo });
+                }
+
+            }
             return giornale;
         }
     }
