@@ -1,35 +1,62 @@
 ﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
 
-<h2>ChangeFonti</h2>
-
-@{if(User.Identity.IsAuthenticated)
+@{if (User.Identity.IsAuthenticated)
     {
-        foreach(Fonte item in Model)
+        foreach (Fonte item in Model)
         {
-            if(item.IsChecked)
-            {
-                <br />
-                <label>@item.Titolo</label>
-                @Html.ActionLink(
-                           linkText:"Rimuovi",
-                           actionName: "Rimuovi",
-                           controllerName:"F",
-                           routeValues: new { Titolo = item.Titolo },
-                           htmlAttributes:null )
-            }
-            else
-            {
-                <br />
-                <label>@item.Titolo</label>
-                @Html.ActionLink("Aggiungi","Aggiungi", controllerName: "F", routeValues: new { Titolo = item.Titolo },htmlAttributes: null)
+            <div class="container">
 
-            }
+                @if (item.IsChecked)
+                {
+                    <div class="row">
+                        <div class="col-md-8 col-md-push-1 jumbotron">
+                            <h4>@item.Titolo</h4>
+                        
+                         <p class="right">
+                            @Html.ActionLink(
+                                    linkText: "Rimuovi",
+                                    actionName: "Rimuovi",
+                                    controllerName: "F",
+                                    routeValues: new { Titolo = item.Titolo },
+                                    htmlAttributes: new { @class = "btn btn-primary btn-xl page-scroll" })
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                          </p>
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-md-7 jumbotron">
+                            <h4>@item.Titolo</h4>
+                        
+                            <p>
+                            @Html.ActionLink(
+                                    linkText: "Aggiungi",
+                                    actionName: "Aggiungi",
+                                    controllerName: "F",
+                                    routeValues: new { Titolo = item.Titolo },
+                                    htmlAttributes: new { @class = "btn btn-primary btn-xl page-scroll" })
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            </p>
+                        </div>
+                    </div>
+
+                }
+            </div>
         }
+
     }
     else
     {
-            <h1>
-                Accedi o Registrati
-            </h1>
-        }
+        <h1>
+            <a href="@Url.Action("Login", "Account")">Accedi</a>
+             o 
+            <a href="@Url.Action("Register", "Account")">Registrati</a>
+        </h1>
+
+        <p class="lead">Per poter scegliere i tuoi Giornali</p>
+
+    }
 }

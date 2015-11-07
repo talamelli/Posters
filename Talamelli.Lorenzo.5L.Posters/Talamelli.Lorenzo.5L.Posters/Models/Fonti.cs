@@ -45,7 +45,7 @@ namespace Talamelli.Lorenzo._5L.Posters
             }
             else
             {
-                new Fonti();
+               AddRange(new Fonti());
             }
         }
     }

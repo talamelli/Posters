@@ -23,9 +23,31 @@ textarea {
     max-width: 280px;
 }
 
+
 .td-color
 {
     font-weight:500;
     font-size:larger;
     font-family:'Trebuchet MS';
 }
+
+.navbar
+{
+    background: rgba(0, 0, 0, 0.19);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+#immagineSfondo
+{
+    background-image:url(../img/1080p-wallpapers-hd.jpg);
+    background-size: 1920px 1080px;
+    
+}
+
+#div-trasp
+{
+    background: rgba(255, 255, 255, 0.30);
+}
+
+
