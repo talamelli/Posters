@@ -47,13 +47,17 @@ namespace Talamelli.Lorenzo._5L.Posters
         }
 
         //scarica la pagina web FeedRss passato
-        private string DownloadString(string address)
+        public string DownloadString(string address)
         {
-            string text;
-            using (var client = new WebClient())
+            string text = "";
+            try
             {
-                text = client.DownloadString(address);
+                using (var client = new WebClient())
+                {
+                    text = client.DownloadString(address);
+                }
             }
+            catch { }
             return text;
         }
 
