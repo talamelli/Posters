@@ -1,22 +1,32 @@
 ﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Notizia>
 
 @{
-    ViewBag.Title = "Posters";
+    ViewBag.Title = "Today's News";
 }
 
-<h2>Post</h2>
 
+<body id="immagineSfondo1">
 
-<table class="table">
+<h2 class="text-capitalize">Le Notizie di oggi <span class="badge">@Model.Count()</span></h2>
+
+<div class="container-fluid" style="background:rgba(6, 80, 133, 0.86)">
+    
+<table class="table table-hover">
     <tr>
         <th>
+            <h4>
             @Html.DisplayNameFor(model => model.Titolo)
+            </h4>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Descrizione)
+            <h4>
+                @Html.DisplayNameFor(model => model.Descrizione)
+            </h4>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SitoProvenienza)
+            <h4>
+                Giornale di Provenienza
+            </h4>
         </th>
         <th></th>
     </tr>
@@ -38,3 +48,5 @@
 }
 
 </table>
+    </div>
+</body>

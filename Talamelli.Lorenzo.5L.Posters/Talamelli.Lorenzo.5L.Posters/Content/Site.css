@@ -33,7 +33,7 @@ textarea {
 
 .navbar
 {
-    background: rgba(0, 0, 0, 0.19);
+    background: rgba(255, 255, 255, 0.19);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
@@ -41,13 +41,37 @@ textarea {
 #immagineSfondo
 {
     background-image:url(../img/1080p-wallpapers-hd.jpg);
-    background-size: 1920px 1080px;
+    background-size:cover;
+   
+    
+}
+#immagineSfondo1
+{
+    background-image:url(../img/Newspaper.jpg);
+    background-size:contain;
+   
     
 }
 
+#immagineSfondo2
+{
+    background-image:url(../img/ws_Inspirational_Poster_2560x1600.png);
+    background-size:cover;
+}
+
+#immagineSfondo3
+{
+    background-image:url(../img/Texture-pezzi-di-giornale.png);
+    background-size:cover;
+}
+
+
 #div-trasp
 {
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(152, 122, 68, 0.50);
+    
 }
+
+
 
 

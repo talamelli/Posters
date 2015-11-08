@@ -214,6 +214,7 @@
     <Content Include="img\portfolio\4.jpg" />
     <Content Include="img\portfolio\5.jpg" />
     <Content Include="img\portfolio\6.jpg" />
+    <Content Include="img\Texture-pezzi-di-giornale.png" />
     <Content Include="img\ws_Inspirational_Poster_2560x1600.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -246,7 +247,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About1.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
