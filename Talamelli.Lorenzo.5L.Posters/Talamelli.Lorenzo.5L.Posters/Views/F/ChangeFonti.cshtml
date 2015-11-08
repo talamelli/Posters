@@ -1,62 +1,66 @@
 ﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
+@{ ViewBag.Title = "I Tuoi Giornali";}
 
-@{if (User.Identity.IsAuthenticated)
-    {
-        foreach (Fonte item in Model)
+<body id="immagineSfondo3">
+
+    @{if (User.Identity.IsAuthenticated)
         {
-            <div class="container">
+            foreach (Fonte item in Model)
+            {
+                <div class="container">
 
-                @if (item.IsChecked)
-                {
-                    <div class="row">
-                        <div class="col-md-8 col-md-push-1 jumbotron">
-                            <h4>@item.Titolo</h4>
-                        
-                         <p class="right">
-                            @Html.ActionLink(
+                    @if (item.IsChecked)
+                    {
+                        <div class="row">
+                            <div class="col-md-8 col-md-push-1 jumbotron">
+                                <p class="lead text-capitalize">@item.Titolo</p>
+
+                                <p class="right">
+                                    @Html.ActionLink(
                                     linkText: "Rimuovi",
                                     actionName: "Rimuovi",
                                     controllerName: "F",
                                     routeValues: new { Titolo = item.Titolo },
                                     htmlAttributes: new { @class = "btn btn-primary btn-xl page-scroll" })
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                          </p>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                }
-                else
-                {
-                    <div class="row">
-                        <div class="col-md-7 jumbotron">
-                            <h4>@item.Titolo</h4>
-                        
-                            <p>
-                            @Html.ActionLink(
+                    }
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-md-7 jumbotron">
+                                <p class="lead text-capitalize">@item.Titolo</p>
+
+                                <p>
+                                    @Html.ActionLink(
                                     linkText: "Aggiungi",
                                     actionName: "Aggiungi",
                                     controllerName: "F",
                                     routeValues: new { Titolo = item.Titolo },
                                     htmlAttributes: new { @class = "btn btn-primary btn-xl page-scroll" })
-                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            </p>
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                }
-            </div>
+                    }
+                </div>
+            }
+
         }
+        else
+        {
+            <h1>
+                <a href="@Url.Action("Login", "Account")">Accedi</a>
+                o
+                <a href="@Url.Action("Register", "Account")">Registrati</a>
+            </h1>
 
+            <p class="lead" style="color:black">Per poter scegliere i tuoi Giornali</p>
+
+        }
     }
-    else
-    {
-        <h1>
-            <a href="@Url.Action("Login", "Account")">Accedi</a>
-             o 
-            <a href="@Url.Action("Register", "Account")">Registrati</a>
-        </h1>
-
-        <p class="lead">Per poter scegliere i tuoi Giornali</p>
-
-    }
-}
+</body>

@@ -26,11 +26,7 @@ namespace Talamelli.Lorenzo._5L.Posters.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            Provider p = new Provider();
-            
-            return View(p.LUrl);
+            return View();
         }
 
         public ActionResult Index()

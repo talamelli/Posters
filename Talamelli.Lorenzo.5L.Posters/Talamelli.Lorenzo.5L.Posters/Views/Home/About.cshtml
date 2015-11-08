@@ -1,22 +1,35 @@
-﻿@model IEnumerable<Talamelli.Lorenzo._5L.Posters.Fonte>
-
-@{
-    ViewBag.Title = "Sorgente";
+﻿@{ 
+    ViewBag.Title = "About";
 }
 
-<h2>Sorgente</h2>
+<body id="immagineSfondo2">
 
-<form>
+<h2>Posters</h2>
+
+<div class="container">
     
-    @foreach (var item in Model)
-    {
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" > @item.Titolo
-        </label>
-    </div>
-    }
-    <input title="Submit" type="submit" action="@Url.Action("Submit","F")" />
- </form>
+        <div class="row">
+            <div class="col-md-5 jumbotron">
+                <p>Realizzato da </p>
+                <h3>Lorenzo Talamelli</h3><h4>5 Lin</h4>
+                <p>Questo sito web è stato creato con l'utilizzo di <br />ASP.NET MVC 5 © @DateTime.Now.Year e GearHost</p>
+                <p><br />Il sito è più bello con 125% di zoom</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+              
+                <h4>Informativa sui cookie</h4>
+
+                <p>Questo sito scolastico forse utilizza i cookie se non vuoi esci dal sito</p>
+                <hr />
+                <p>I cookie sono utilizzati probabilmente per la memorizzazione dei dati del login.</p>
+            </div>
+        </div>
+
+</div>
+
+</body>
+
                                                 
 

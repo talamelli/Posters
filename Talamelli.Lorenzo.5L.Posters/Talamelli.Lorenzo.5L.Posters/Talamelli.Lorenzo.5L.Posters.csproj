@@ -214,6 +214,7 @@
     <Content Include="img\portfolio\4.jpg" />
     <Content Include="img\portfolio\5.jpg" />
     <Content Include="img\portfolio\6.jpg" />
+    <Content Include="img\Texture-pezzi-di-giornale.png" />
     <Content Include="img\ws_Inspirational_Poster_2560x1600.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

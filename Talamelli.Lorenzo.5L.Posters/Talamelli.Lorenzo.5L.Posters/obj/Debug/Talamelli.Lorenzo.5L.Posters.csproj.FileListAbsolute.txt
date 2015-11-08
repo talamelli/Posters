@@ -237,3 +237,4 @@ C:\Users\Lorenzo\Documents\GitHub\Posters\Talamelli.Lorenzo.5L.Posters\Talamelli
 C:\Users\Lorenzo\Documents\GitHub\Posters\Talamelli.Lorenzo.5L.Posters\Talamelli.Lorenzo.5L.Posters\bin\it\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Lorenzo\Documents\GitHub\Posters\Talamelli.Lorenzo.5L.Posters\Talamelli.Lorenzo.5L.Posters\obj\Debug\Talamelli.Lorenzo.5L.Posters.dll
 C:\Users\Lorenzo\Documents\GitHub\Posters\Talamelli.Lorenzo.5L.Posters\Talamelli.Lorenzo.5L.Posters\obj\Debug\Talamelli.Lorenzo.5L.Posters.pdb
+C:\Users\Lorenzo\Documents\GitHub\Posters\Talamelli.Lorenzo.5L.Posters\Talamelli.Lorenzo.5L.Posters\obj\Debug\Talamelli.Lorenzo.5L.Posters.csprojResolveAssemblyReference.cache
